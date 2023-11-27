@@ -18,6 +18,15 @@ const pokemonsAsh = [
   {id:2, name:'Wartortle'},
   {id:3, name:'Charmeleon'}
 ];
+const series = [
+  { id: 1, name: 'Todo Mundo odeia o Cris' },
+  { id: 2, name: 'the twilight zone' },
+  { id: 3, name: 'doctor who' }
+];
+app.get('/series', (req, res) => {
+  const topseries = series.slice(0, 10);
+  res.json(topseries);
+});
 app.get('/pokemons', (req, res) => {
   const top10Pokemons = pokemonsAsh.slice(0, 10);
   res.json(top10Pokemons);
