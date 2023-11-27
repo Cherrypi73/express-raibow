@@ -18,7 +18,11 @@ app.get('/meunome', (req, res) => {
   res.send(resposta);
 });
 
-
+// Novo endpoint GET /tico
+app.get('/tico', (req, res) => {
+  const resposta = 'teco 😂';
+  res.send(resposta);
+});
 
 // Inicie o servidor na porta 3000 (ou qualquer outra porta desejada)
 const PORT = process.env.PORT || 3000;
