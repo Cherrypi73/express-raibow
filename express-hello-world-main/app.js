@@ -11,7 +11,17 @@ app.get('/req', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
 })
-
+const pokemonsAsh = [
+  { id: 1, name: 'Bulbasaur' },
+  { id: 4, name: 'Charmander' },
+  { id: 7, name: 'Squirtle' },
+  {id:2, name:'Wartortle'},
+  {id:3, name:'Charmeleon'}
+];
+app.get('/pokemons', (req, res) => {
+  const top10Pokemons = pokemonsAsh.slice(0, 10);
+  res.json(top10Pokemons);
+});
 app.get('/meunome', (req, res) => {
   const nomeCompleto = 'Maria Luiza Passos';
   const resposta = `Meu nome é ${nomeCompleto}`;
