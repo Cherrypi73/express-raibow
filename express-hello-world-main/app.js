@@ -12,7 +12,19 @@ app.get('/req', (req, res) => {
     res.send('Yo!')
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get('/meunome', (req, res) => {
+  const nomeCompleto = 'Maria Luiza Passos';
+  const resposta = `Meu nome é ${nomeCompleto}`;
+  res.send(resposta);
+});
+
+
+
+// Inicie o servidor na porta 3000 (ou qualquer outra porta desejada)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado na porta ${PORT}`);
+});
 
 
 const html = `
